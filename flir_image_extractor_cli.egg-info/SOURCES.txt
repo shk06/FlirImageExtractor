@@ -1,4 +1,6 @@
+LICENSE
 README.md
+pyproject.toml
 setup.py
 flir_image_extractor_cli/__init__.py
 flir_image_extractor_cli/__main__.py
