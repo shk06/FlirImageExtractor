@@ -26,23 +26,23 @@ It also requires other python packages, *matplotlib*, *numpy* and *pillow*, whic
 
 Once you have install exiftool, you can install the CLI using pip:
 ```bash
-pip install flirimageextractor
+pip install flir-image-extractor-cli
 ```
 On windows you may need to use:
 ```bash
-python -m pip install flirimageextractor
+python -m pip install flir-image-extractor-cli
 ```
 
 To update to the latest version of the CLI use this command. The first time you install the latest version will be automatically downloaded.
 ```bash
-pip install --upgrade flirimageextractor
+pip install --upgrade flir-image-extractor-cli
 ```
 
 ## Usage
 
 You can start the CLI using the terminal.
 ```bash
-flirimageextractor
+flir-image-extractor-cli
 ````
 
 
@@ -59,13 +59,6 @@ Other cameras might need some small tweaks (the embedded raw data can be in mult
 
 ## Development
 Install the required packages using [Pipenv](https://pipenv.kennethreitz.org/en/latest/). Then run `pre-commit install` to install the pre-commit hooks. Note that this tool is intended to work on Windows as well as Unix operating systems so use os.path functions to manipulate file paths instead of string manipulation.
-
-## Build Command for Dev (uses poetry)
-`
-- python -m build --sdist --wheel
-- poetry build
-`
-
 ## Credits
 
 This CLi was developed using this repo:
