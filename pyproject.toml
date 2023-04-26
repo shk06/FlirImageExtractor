@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "flirimageextractor"
+version = "1.4.1"
+description = ""
+authors = ["olawale williams <olawalewilliams9438@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+black = "23.3.0"
+pillow = "9.5.0"
+matplotlib = "3.5.3"
+numpy = "1.21.1"
+sphinx = "5.3.0"
+keyring = "23.13.1"
+pre-commit = "2.21.0"
+loguru = "0.7.0"
+wxpython = "4.2.0"
+logzero = "1.7.0"
+opencv-python = "4.5.1.48"
+requests = "2.28.2"
+tqdm = "4.65.0"
+m2r = "0.3.1"
+
+
+[tool.poetry.plugins] # Optional super table
+
+[tool.poetry.plugins."airflow.plugins"]
+"flir-image-extractor" = "flirimageextractor.__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
