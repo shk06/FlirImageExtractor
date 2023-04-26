@@ -26,7 +26,10 @@ m2r = "0.3.1"
 [tool.poetry.plugins] # Optional super table
 
 [tool.poetry.plugins."airflow.plugins"]
-"flir-image-extractor" = "flirimageextractor.__main__:main"
+flir-image-extractor = "flirimageextractor.__main__:main"
+
+[tool.poetry.scripts]
+flir-image-extractor = 'flirimageextractor.__main__:main'
 
 [build-system]
 requires = ["poetry-core"]
