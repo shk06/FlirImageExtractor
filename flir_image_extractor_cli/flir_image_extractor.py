@@ -101,7 +101,7 @@ class FlirImageExtractor:
             self.use_thumbnail = True
             self.fix_endian = False
         if self.get_image_type().upper().strip() == "DJI":
-     
+            # valid for radiometric format thermal camera images from DJI Zenmuse ZH20T camera
             image = ThermalImage(image_path=flir_img_file, camera_manufacturer="dji")
             self.thermal_image_np  = image.thermal_np   
         else:
