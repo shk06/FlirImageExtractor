@@ -14,3 +14,13 @@ dist/*
 .vscode/
 
 venv/
+env/
+
+
+gist_ncar/
+gnuplot2/
+bwr/
+thermal-data/
+
+build/
+.gitignore

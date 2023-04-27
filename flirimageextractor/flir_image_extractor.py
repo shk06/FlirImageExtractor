@@ -9,7 +9,7 @@ import numpy as np
 from PIL import Image, ImageEnhance
 from loguru import logger
 from matplotlib import pyplot as plt, cm
-from flir_image_extractor_cli.thermal_base import ThermalImage
+from flirimageextractor.thermal_base import ThermalImage
 class FlirImageExtractor:
     """
     Instance of FlirImageExtractor

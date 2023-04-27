@@ -1,10 +1,24 @@
+Metadata-Version: 2.1
+Name: flir-image-extractor-cli
+Version: 1.0.2
+Summary: A cli-tool to get thermal information out of FLIR radiometric JPGs
+Home-page: https://github.com/nationaldronesau/FlirImageExtractor
+Author: National Drones
+Author-email: development@nationaldrones.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # Flir Image Extractor CLI
 
 The email address attached to this on PyPi may not be monitored, open issues on the [GitHub repo](https://github.com/nationaldronesau/FlirImageExtractor) to ensure a response
 
 Feel free to submit any pull requests or issues, this is in active development. Also let me know if you are successful in using this on cameras not listed below.
 
-FLIR® thermal cameras like the FLIR ONE® include both a thermal and a visual light camera.
+FLIRÂ® thermal cameras like the FLIR ONEÂ® include both a thermal and a visual light camera.
 The latter is used to enhance the thermal image using an edge detector. The resulting image is saved as a
 jpg image but both the original visual image and the raw thermal sensor data are embedded in the jpg metadata.
 
@@ -26,23 +40,23 @@ It also requires other python packages, *matplotlib*, *numpy* and *pillow*, whic
 
 Once you have install exiftool, you can install the CLI using pip:
 ```bash
-pip install flirimageextractor
+pip install flir-image-extractor-cli
 ```
 On windows you may need to use:
 ```bash
-python -m pip install flirimageextractor
+python -m pip install flir-image-extractor-cli
 ```
 
 To update to the latest version of the CLI use this command. The first time you install the latest version will be automatically downloaded.
 ```bash
-pip install --upgrade flirimageextractor
+pip install --upgrade flir-image-extractor-cli
 ```
 
 ## Usage
 
 You can start the CLI using the terminal.
 ```bash
-flirimageextractor
+flir-image-extractor-cli
 ````
 
 
@@ -59,13 +73,6 @@ Other cameras might need some small tweaks (the embedded raw data can be in mult
 
 ## Development
 Install the required packages using [Pipenv](https://pipenv.kennethreitz.org/en/latest/). Then run `pre-commit install` to install the pre-commit hooks. Note that this tool is intended to work on Windows as well as Unix operating systems so use os.path functions to manipulate file paths instead of string manipulation.
-
-## Build Command for Dev (uses poetry)
-`
-- python -m build --sdist --wheel
-- poetry build
-`
-
 ## Credits
 
 This CLi was developed using this repo:
