@@ -54,6 +54,7 @@ The CLI is able to output 3 folders of images with the `bwr`, `gnuplot`, and `gi
 - Flir One (thermal + RGB)
 - Xenmuse XTR (thermal + thumbnail, set the subject distance to 1 meter)
 - AX8 (thermal + RGB)
+- DJI Zenmuse H20T Camera (ZH20T)
 
 Other cameras might need some small tweaks (the embedded raw data can be in multiple image formats). Let me know if you succesfully use other cameras so they can be added to this list.
 
@@ -68,5 +69,6 @@ Install the required packages using [Pipenv](https://pipenv.kennethreitz.org/en/
 
 ## Credits
 
-This CLi was developed using this repo:
-https://github.com/Nervengift/read_thermal.py
+This CLi was developed using this repos:
+- https://github.com/Nervengift/read_thermal.py
+- https://github.com/detecttechnologies/thermal_base/
