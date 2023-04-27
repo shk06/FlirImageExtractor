@@ -31,7 +31,6 @@ jobs:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
-        poetry install
         poetry build # python -m build --sdist --wheel
-        poetry publish --username="$TWINE_USERNAME" --password="$TWINE_PASSWORD"
+        # poetry publish --username="$TWINE_USERNAME" --password="$TWINE_PASSWORD"
         # twine upload -u "$TWINE_USERNAME" -p "$TWINE_PASSWORD" dist/*
