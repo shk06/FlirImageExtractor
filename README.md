@@ -61,11 +61,9 @@ Other cameras might need some small tweaks (the embedded raw data can be in mult
 ## Development
 Install the required packages using [Pipenv](https://pipenv.kennethreitz.org/en/latest/). Then run `pre-commit install` to install the pre-commit hooks. Note that this tool is intended to work on Windows as well as Unix operating systems so use os.path functions to manipulate file paths instead of string manipulation.
 
-## Build Command for Dev (uses poetry)
-`
+## Build Command for Dev (uses poetry or twine)
 - python -m build --sdist --wheel
 - poetry build
-`
 
 ## Credits
 
