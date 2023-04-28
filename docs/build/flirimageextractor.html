@@ -1,28 +1,31 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>API Documentation &#8212; FlirImageExtractor 1.2.11 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>API Documentation &#8212; FlirImageExtractor 1.5.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Flir Image Extractor" href="README.html" />
-
+    <link rel="prev" title="Flir Image Extractor CLI" href="README.html" />
+   
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-
-
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head><body>
-
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -33,118 +36,254 @@
     <ul>
         <li>
           &larr;
-          <a href="README.html" title="Previous document">Flir Image Extractor</a>
+          <a href="README.html" title="Previous document">Flir Image Extractor CLI</a>
         </li>
     </ul>
   </nav>
               </div>
-
+          
 
           <div class="body" role="main">
-
-  <div class="section" id="api-documentation">
-<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="flirimageextractor.FlirImageExtractor">
-<em class="property">class </em><code class="sig-prename descclassname">flirimageextractor.</code><code class="sig-name descname">FlirImageExtractor</code><span class="sig-paren">(</span><em class="sig-param">exiftool_path='exiftool', is_debug=False, palettes=[&lt;matplotlib.colors.LinearSegmentedColormap object&gt;, &lt;matplotlib.colors.LinearSegmentedColormap object&gt;, &lt;matplotlib.colors.LinearSegmentedColormap object&gt;]</em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.check_for_thermal_image">
-<code class="sig-name descname">check_for_thermal_image</code><span class="sig-paren">(</span><em class="sig-param">flir_img_filename</em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.check_for_thermal_image" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a valid image path, return a boolean of whether the image contains thermal data
-:param flir_img_filename: Input path for the flir image
-:return: Bool</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.extract_embedded_image">
-<code class="sig-name descname">extract_embedded_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.extract_embedded_image" title="Permalink to this definition">¶</a></dt>
-<dd><p>extracts the visual image as 2D numpy array of RGB values</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.extract_float">
-<em class="property">static </em><code class="sig-name descname">extract_float</code><span class="sig-paren">(</span><em class="sig-param">dirtystr</em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.extract_float" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extract the float value of a string, helpful for parsing the exiftool data
-:return:</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.extract_thermal_image">
-<code class="sig-name descname">extract_thermal_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.extract_thermal_image" title="Permalink to this definition">¶</a></dt>
-<dd><p>extracts the thermal image as 2D numpy array with temperatures in oC</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.get_image_type">
-<code class="sig-name descname">get_image_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.get_image_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the embedded thermal image type, generally can be TIFF or PNG
-:return:</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.get_metadata">
-<code class="sig-name descname">get_metadata</code><span class="sig-paren">(</span><em class="sig-param">flir_img_file</em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.get_metadata" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a valid file path or file-like object get relevant metadata out of the image using exiftool</p>
+            
+  <section id="api-documentation">
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">flirimageextractor.</span></span><span class="sig-name descname"><span class="pre">FlirImageExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exiftool_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'exiftool'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">palettes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance of FlirImageExtractor</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.check_for_thermal_image">
+<span class="sig-name descname"><span class="pre">check_for_thermal_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flir_img_filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.check_for_thermal_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a valid image path, return a boolean of whether the image contains thermal data.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>flir_img_file</strong> – </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>flir_img_filename</strong> – File path or file like object to load the image from</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.extract_embedded_image">
+<span class="sig-name descname"><span class="pre">extract_embedded_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.extract_embedded_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>extracts the visual image as 2D numpy array of RGB values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Numpy Array of RGB values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.extract_float">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirty_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.extract_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the float value of a string, helpful for parsing the exiftool data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dirty_str</strong> – The string to parse the float from</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The float parsed from the string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.extract_thermal_image">
+<span class="sig-name descname"><span class="pre">extract_thermal_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.extract_thermal_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>extracts the thermal image as 2D numpy array with temperatures in oC</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Numpy Array of thermal values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.get_image_type">
+<span class="sig-name descname"><span class="pre">get_image_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.get_image_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the embedded thermal image type, generally can be TIFF or PNG</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.get_metadata">
+<span class="sig-name descname"><span class="pre">get_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flir_img_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.get_metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a valid file path or file-like object get relevant metadata out of the image using exiftool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>flir_img_file</strong> – File path or file like object to load the image from</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p></p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.get_rgb_np">
-<code class="sig-name descname">get_rgb_np</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.get_rgb_np" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the last extracted rgb image
-:return:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.get_rgb_np">
+<span class="sig-name descname"><span class="pre">get_rgb_np</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.get_rgb_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the last extracted rgb image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.get_thermal_np">
-<code class="sig-name descname">get_thermal_np</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.get_thermal_np" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the last extracted thermal image
-:return:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.get_thermal_np">
+<span class="sig-name descname"><span class="pre">get_thermal_np</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.get_thermal_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the last extracted thermal image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.plot">
-<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">palette=&lt;matplotlib.colors.LinearSegmentedColormap object&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.plot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot the rgb and thermal image (easy to see the pixel values), include a matplotlib colormap to change the colors
-:return:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.loadfile">
+<span class="sig-name descname"><span class="pre">loadfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.loadfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads an image file from a file path or a file-like object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file</strong> – File path or file like object to load the image from</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.process_image">
-<code class="sig-name descname">process_image</code><span class="sig-paren">(</span><em class="sig-param">flir_img_file</em>, <em class="sig-param">RGB=False</em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.process_image" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palette=&lt;matplotlib.colors.LinearSegmentedColormap</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the rgb and thermal image (easy to see the pixel values), include a matplotlib colormap to change the colors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>palette</strong> – A matplotlib colormap to display the thermal image in</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.process_image">
+<span class="sig-name descname"><span class="pre">process_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flir_img_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RGB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.process_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given a valid image path, process the file: extract real thermal values
-and a thumbnail for comparison (generally thumbnail is on the visible spectre)
-:param flir_img_file: Input path for the flir image
-:param RGB: Boolean for whether to extract the embedded RGB image
-:return:</p>
+and an RGB image if specified</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flir_img_file</strong> – File path or file like object to load the image from</p></li>
+<li><p><strong>RGB</strong> – Boolean for whether to extract the embedded RGB image</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.raw2temp">
-<em class="property">static </em><code class="sig-name descname">raw2temp</code><span class="sig-paren">(</span><em class="sig-param">raw</em>, <em class="sig-param">E=1</em>, <em class="sig-param">OD=1</em>, <em class="sig-param">RTemp=20</em>, <em class="sig-param">ATemp=20</em>, <em class="sig-param">IRWTemp=20</em>, <em class="sig-param">IRT=1</em>, <em class="sig-param">RH=50</em>, <em class="sig-param">PR1=21106.77</em>, <em class="sig-param">PB=1501</em>, <em class="sig-param">PF=1</em>, <em class="sig-param">PO=-7340</em>, <em class="sig-param">PR2=0.012545258</em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.raw2temp" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.raw2temp">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">raw2temp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RTemp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ATemp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IRWTemp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IRT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RH</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PR1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21106.77</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1501</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PO</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-7340</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PR2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.012545258</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.raw2temp" title="Permalink to this definition">¶</a></dt>
 <dd><p>convert raw values from the flir sensor to temperatures in C
 # this calculation has been ported to python from
 # <a class="reference external" href="https://github.com/gtatters/Thermimage/blob/master/R/raw2temp.R">https://github.com/gtatters/Thermimage/blob/master/R/raw2temp.R</a>
 # a detailed explanation of what is going on here can be found there</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="flirimageextractor.FlirImageExtractor.save_images">
-<code class="sig-name descname">save_images</code><span class="sig-paren">(</span><em class="sig-param">min=None</em>, <em class="sig-param">max=None</em>, <em class="sig-param">bytesIO=False</em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.save_images" title="Permalink to this definition">¶</a></dt>
-<dd><p>Save the extracted images
-:return:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.FlirImageExtractor.save_images">
+<span class="sig-name descname"><span class="pre">save_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minTemp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxTemp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bytesIO</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.FlirImageExtractor.save_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the extracted images</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>minTemp</strong> – (Optional) Manually set the minimum temperature for the colormap to use</p></li>
+<li><p><strong>maxTemp</strong> – (Optional) Manually set the maximum temperature for the colormap to use</p></li>
+<li><p><strong>bytesIO</strong> – (Optional) Return an array of BytesIO objects containing the images rather than saving to disk</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Either a list of filenames where the images were save, or an array containing BytesIO objects of the output images</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="flirimageextractor.ThermalImage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">flirimageextractor.</span></span><span class="sig-name descname"><span class="pre">ThermalImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">camera_manufacturer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_map</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'jet'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thermal_np</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.ThermalImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thermal Image class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.ThermalImage.extract_temperatures_dji">
+<span class="sig-name descname"><span class="pre">extract_temperatures_dji</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.ThermalImage.extract_temperatures_dji" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the DJI-encoded thermal image as 2D floating-point numpy array with temperatures in degC.</p>
+<p>The raw sensor values are obtained using the sample binaries provided in the official Thermal SDK by DJI.
+The executable file is run and generates a 16 bit unsigned RAW image with Little Endian byte order.
+Link to DJI Forum post: <a class="reference external" href="https://forum.dji.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=230321&amp;pid=2389016">https://forum.dji.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=230321&amp;pid=2389016</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.ThermalImage.extract_temperatures_flir">
+<span class="sig-name descname"><span class="pre">extract_temperatures_flir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.ThermalImage.extract_temperatures_flir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the FLIR-encoded thermal image as 2D floating-point numpy array with temperatures in degC.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.ThermalImage.generate_colorbar">
+<span class="sig-name descname"><span class="pre">generate_colorbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_temp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_temp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.ThermalImage.generate_colorbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to generate a colourbar image that can be stitched to the side of your thermal image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min_temp</strong> (<em>int</em><em>, </em><em>optional</em>) – Minimum temperature on colourbar.
+If not passed, then the image’s minimumtemperature is taken. Defaults to None.</p></li>
+<li><p><strong>max_temp</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum temperature on colourbar.
+If not passed, then the image’s maximumtemperature is taken. Defaults to None.</p></li>
+<li><p><strong>cmap</strong> (<em>cv Colormap</em><em>, </em><em>optional</em>) – Which false colour mapping to use for the colourbar.
+Defaults to cv.COLORMAP_JET.</p></li>
+<li><p><strong>height</strong> (<em>int</em><em>, </em><em>optional</em>) – Height of the colourbar canvas to be used.
+If not passed, takes the height of the thermal image. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A colourbar of the required height with temperature values labelled</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="flirimageextractor.ThermalImage.save_thermal_image">
+<span class="sig-name descname"><span class="pre">save_thermal_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flirimageextractor.ThermalImage.save_thermal_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts the floating-point temperature array into an image and saves the image.</p>
+<p>Takes the current <cite>self.thermal_np</cite> temperature array, converts it to image-friendly uint8 format. Then it
+computes and stitches a colourbar for required scale. Finally it saves the image to the specified output path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>output_path</strong> (<em>str / Path</em>) – Save destination for the thermal image</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 
 
           </div>
@@ -154,12 +293,12 @@ and a thumbnail for comparison (generally thumbnail is on the visible spectre)
     <ul>
         <li>
           &larr;
-          <a href="README.html" title="Previous document">Flir Image Extractor</a>
+          <a href="README.html" title="Previous document">Flir Image Extractor CLI</a>
         </li>
     </ul>
   </nav>
               </div>
-
+          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -174,17 +313,21 @@ and a thumbnail for comparison (generally thumbnail is on the visible spectre)
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="README.html">Flir Image Extractor</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Flir Image Extractor CLI</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#flirimageextractor.FlirImageExtractor"><code class="docutils literal notranslate"><span class="pre">FlirImageExtractor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flirimageextractor.ThermalImage"><code class="docutils literal notranslate"><span class="pre">ThermalImage</span></code></a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="README.html" title="previous chapter">Flir Image Extractor</a></li>
+      <li>Previous: <a href="README.html" title="previous chapter">Flir Image Extractor CLI</a></li>
   </ul></li>
 </ul>
 </div>
@@ -192,12 +335,12 @@ and a thumbnail for comparison (generally thumbnail is on the visible spectre)
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
 
 
@@ -211,19 +354,19 @@ and a thumbnail for comparison (generally thumbnail is on the visible spectre)
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, National Drones.
-
+      &copy;2023, National Drones.
+      
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
       |
       <a href="_sources/flirimageextractor.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
+    
 
-
-
+    
   </body>
 </html>
