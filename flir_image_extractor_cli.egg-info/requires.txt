@@ -1,9 +1,0 @@
-numpy
-pillow
-matplotlib
-loguru
-prompt_toolkit
-logzero
-opencv_python
-requests
-tqdm
