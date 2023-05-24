@@ -64,6 +64,7 @@ Install the required packages using [Pipenv](https://pipenv.kennethreitz.org/en/
 ## Build Command for Dev (uses poetry or twine)
 - python -m build --sdist --wheel
 - poetry build
+- poetry add "packagename" --group=extras --optional
 - sphinx-build -b html docs/source docs/build (To Generate Docs)
 
 ## Credits
