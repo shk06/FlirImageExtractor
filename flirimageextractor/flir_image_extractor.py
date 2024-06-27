@@ -411,10 +411,11 @@ class FlirImageExtractor:
             ) / (np.amax(self.thermal_image_np) - np.amin(self.thermal_image_np))
 
         if not bytesIO:
-            thermal_output_filename_array = self.flir_img_filename.split(".")
+            # use splitext to handle dots in filenames properly.
+            thermal_output_filename_array = os.path.splitext(self.flir_img_filename)
             thermal_output_filename = (
                 thermal_output_filename_array[0]
-                + "_thermal."
+                + "_thermal"
                 + thermal_output_filename_array[1]
             )
 
@@ -434,12 +435,12 @@ class FlirImageExtractor:
                 transformed_filename = transform_filename_into_directory(
                     thermal_output_filename, str(palette.name)
                 )
-                filename_array = transformed_filename.split(".")
+                # use splitext to handle dots in filenames properly.
+                filename_array = os.path.splitext(transformed_filename)
                 filename = (
                     filename_array[0]
                     + "_"
                     + str(palette.name)
-                    + "."
                     + filename_array[1]
                 )
                 if self.is_debug:
