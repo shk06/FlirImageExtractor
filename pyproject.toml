@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flirimageextractor"
-version = "1.5.4"
+version = "1.5.5"
 description = "A small tool/lib to read temperatures and original photos from FLIR® thermal camera images."
 authors = [
     "National Drones <development@nationaldrones.com>",
@@ -38,7 +38,6 @@ logzero = "^1.7.0"
 opencv-python = "^4.10.0.84"
 requests = "^2.32.3"
 tqdm = "^4.66.4"
-m2r = "^0.3.1"
 
 
 # [tool.poetry.plugins] # Optional super table
@@ -58,6 +57,7 @@ prompt-toolkit = "^3.0.47"
 
 [tool.poetry.group.extras.dependencies]
 wxpython = {version = "^4.2.0", optional = true}
+m2r = "^0.3.1"
 
 [build-system]
 requires = ["poetry-core"]
