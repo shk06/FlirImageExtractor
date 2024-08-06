@@ -1,7 +1,7 @@
 matplotlib==3.5.3
 sphinx==5.3.0
 black==23.3.0
-numpy==1.21.1
+numpy==2.0.0
 pillow==9.5.0
 m2r==0.3.1
 keyring==23.13.1
